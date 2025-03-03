@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif; /* sets the font fot the page*/
+    line-height: 1.6; /*increased line height for better readability*/
+    margin: 0;/*removes the default margin*/
+    padding: 0; /*removes default padding*/
+    background-color: #f4f4f4;/*light gray background*/
+}
+
+header {
+    background-color: #333;/*created dark grey background for the header*/
+    color: white;/*the text of the header is white*/
+    padding: 10px 0;/*adds padding below and abobe header content*/
+    text-align: center;/*centers the text in the header*/
+}
+
+header h1 {
+    margin: 0;/*removes the margin from the heading*/
+}
+
+nav ul {
+    list-style-type: none;/* removes default list bullets*/
+    padding: 0;/*removes padding from the list*/
+}
+
+nav ul li {
+    display: inline;/*displays list items in a row*/
+    margin: 0 10px;/*adds a margin between list items*/
+}
+
+nav ul li a {
+    color: white;/*sets the link color to white*/
+    text-decoration: none;/*removes the underline from links*/
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Adds underline when hovering over links */
+}
+
+section {
+    padding: 20px;/*adds padding inside the section*/
+    margin: 20px;/*adds margin outside the section*/
+    background-color: white;/*displays white background for the content area*/
+}
+
+footer {
+    text-align: center;/*centers footer text*/
+    background-color: #333;/*dark grey background for footer*/
+    color: white;/*white text in footer*/
+    padding: 10px 0;/*adds padding above and below footer content*/
+    position: fixed;/*fixes the footer at the bottom*/
+    width: 100%;/*makes sure that the footer spans the entire width of the page*/
+    bottom: 0;/*positions footer at the bottom*/
+}
+
+/* Layout using Flexbox for main content */
+ul {
+    padding-left: 20px;/*adds padding to the left to the unordered list*/
+}
+
+h2 {
+    color: #333;/*color for subheadings*/
+}
