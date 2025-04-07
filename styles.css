@@ -32,10 +32,6 @@ nav ul li a {
     text-decoration: none;/*removes the underline from links*/
 }
 
-nav ul li a:hover {
-    text-decoration: underline; /* Adds underline when hovering over links */
-}
-
 section {
     padding: 20px;/*adds padding inside the section*/
     margin: 20px;/*adds margin outside the section*/
