@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1">
+    <title> Quiz - Web Application Security</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="quiz.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Web Application Security Quiz</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="threats.html">Security Threats</a></li>
+                <li><a href="best-practices.html">Best Practices</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Test Your Knowledge!</h2>
+            <form id="quiz-form">
+                <fieldset>
+                    <legend>1. What is the purpose of HTTPS?</legend>
+                    <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">a)To speed up website loading.</label><br>
+                    <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">b)To encryprt data between the browser and server.</label><br>
+                    <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">c)To provide storage space</label><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Which of the following is common web appliation security threat?</legend>
+                    <input type="checkbox" name="q2" value="a" id="q2a"><label for="q2a">a) SQL Injection</label><br>
+                    <input type="checkbox" name="q2" value="b" id="q2b"><label for="q2b">b)XSS(Cross-Site-Scripting)</label><br>
+                    <input type="checkbox" name="q2" value="c" id="q2c"><label for="q2c">c) Faster loading page</label><br>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>3. Fill in the blank: A ________ helps prevent unauthorized access to private resources.</legend>
+                    <input type="text" name="q3" id="q3" placeholder="Your answer here">
+                </fieldset>
+
+                <input type="submit" value="Submit Quiz">
+            </form>
+            <div id="result" style="display:none;">
+                <h3>Your score</h3>
+                <p id="score-text"></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Web Application Security Quiz</p>
+    </footer>
+</body>
+</html>
