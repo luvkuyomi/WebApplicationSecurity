@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Web Application Security</h1>
+        <h1>Web Application Security Best Practices</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -19,20 +20,98 @@
             </ul>
         </nav>
     </header>
-
-    <section>
-        <h2>Best Practices for Web Application Security</h2> <!--heading for the best practices page-->
+    <main>
+     <section>
+        <!--HTTPS and Encryption-->
+        <h2>1. Use HTTPS</h2>
+        <p>Always use HTTPS to ensure secure communication between clients and servers. HTTPS encrypts data in transit, preventing attackers from intercepting sensitive information.</p>
         <ul>
-            <!--list of best practices to follow for web application security-->
-            <li><strong>Input Validation:</strong> Always sanitize user inputs to avoid injections.</li>
-            <li><strong>Use HTTPS:</strong> Secure your connections by enabling HTTPS.</li>
-            <li><strong>Implement Strong Authentication:</strong> Use two-factor authentication (2FA) where possible.</li>
-            <li><strong>Regular Security Audits:</strong> Regularly test your web application for vulnerabilities.</li>
-            <!--creates a list  of items(defentions) while bolding the important words-->
-        </ul>
-    </section>
+            <li>Enables SSL/TLS encryption</li>
+            <li>Prevents man-in-the-middle(MIM) attacks</li>
+            <li>Builds user trust and is favored by search engines</li>
+            <img src="images/https-encryption-diagram.png" alt="HTTPS Encryption Diagram" style="max-width:100%; height:auto;">
 
-    <footer>
-        <p>© 2025 Web Application Security</p>
+        </ul>
+
+        <!--Input Validation-->
+        <h2>2. Validate and Sanitize User Input</h2>
+        <p>Input validation prevents malicious data from being processed by the application, reducing the risk of injection attacks.</p>
+        <ul>
+            <li>Use allow-lists (whitelists) for valid input values</li>
+            <li>Reject unexpected characters or formats</li>
+            <li>Use vuilt-in input sanitization libraries</li>
+        </ul>
+
+        <!--Authentication Security-->
+        <h2>3, Secure Authentication Mechanisms</h2>
+        <p> Authentication is a critical part of application security. Ensure strong passwords, implement multi-factor authentication, and protect session tokens.</p>
+        <ul>
+            <li>Enforce strong password policies</li>
+            <li>Implement 2FA (Two-Factor Authentication)</li>
+            <li>Use secure cookies and short session expiration times</li>
+        </ul>
+
+        <!--Least Privilege Principle-->
+        <h2>4. Principle of Least Privilege</h2>
+        <p>Grant users and processes only the permissions they need to perform their tasks. This reduces the potential damage in case of a breach.</p>
+        <ul>
+            <li>Limit admin access</li>
+            <li>Seperate user roles appropriately</li>
+            <li>Review and audit permissions regularly</li>
+            <img src="images/rbac-diagram.png" alt="RBAC Diagram" style="max-width:100%; height:auto;">
+
+        </ul>
+
+        <!--Regular Security Updates-->
+        <h2>5. Keep Software and Dependencies Updated</h2>
+        <p>Outdated libraries and software may contain known vulnerabilities. Regular updates reduce exposure to known exploits.</p>
+        <ul>
+            <li>Apply security patches promptly</li>
+            <li>Use tools to track vulnerable dependencies (e.g., Snyk, Dependabot)</li>
+            <li>Audit open-source code dependencies regularly</li>
+        </ul>
+
+        <!--Best Practices Summary Table-->
+        <h2>Best Pratices Summary</h2>
+        <div class="table-wrapper">
+        <table>
+            <tr>
+                <th>Best Pratice</th>
+                <th>Purpose</th>
+                <th>Examples</th>
+            </tr>
+            <tr>
+                <td>HTTPS</td>
+                <td>Encrypts communication</td>
+                <td>SSL/TLS certificates, secure headers</td>
+            </tr>
+            <tr>
+                <td>Input Validation</td>
+                <td>Prevents injection attacks</td>
+                <td>Regex filters, whitelist validation</td>
+            </tr>
+            <tr>
+                <td>Authentication Security</td>
+                <td>Protects uiser accounts</td>
+                <td>2FA, hased passwords</td>
+            </tr>
+            <tr>
+                <td>Least Privilege</td>
+                <td>Minimizes impact of breach</td>
+                <td>Role-based access control</td>
+            </tr>
+            <tr>
+                <td>Software Updates</td>
+                <td>Reduces vulnerability risk</td>
+                <td>Patch management, version control</td>
+            </tr>
+        </table>
+        </div>
+    </section>
+</main>
+    <!--Page Footer-->
+<footer>
+        <p>&copy; 2025 Web Application Security</p>
     </footer>
 </body>
+</html>

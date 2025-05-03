@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <h1>Web Application Security</h1>
+        <h1>Common Web Application Security Threats</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li> <!--links back to the home page-->
@@ -21,18 +21,82 @@
     </header>
 
     <section>
-        <!--main content for the types of security threats-->
-        <h2>Types of Web Application Security Threats</h2> <!--heading for the section-->
-        <ul>
-            <!--creates an unordered list-->
-            <li><strong>Cross-Site Scripting (XSS):</strong> An attack where malicious scripts are injected into websites.</li>
-            <li><strong>SQL Injection:</strong> Attackers insert malicious SQL queries into input fields.</li>
-            <li><strong>Cross-Site Request Forgery (CSRF):</strong> Force a user to execute unwanted actions on a web application.</li>
-            <li><strong>Broken Authentication:</strong> Exploiting vulnerabilities in authentication mechanisms.</li>
-            <!--provides details about the types of web application threats by putting the defenitions in a list and making them bold  -->
-        </ul>
+    <!-- SQL Injection Section-->
+     <h2>1. SQL Injection</h2>
+     <p>SQL Injection is a vulnerability that allows attackers to interfere with the queries that an application makes to its database. This can lead to to unauthorized access, data, leakage, or even deletion of records. </p>
+     <ul>
+        <li>Occurs when user input is embedded into SQL quesries without validation</li>
+        <li>Can expose or destroy sensitive data</li>
+        <li>Example: <code>' OR 1=1 --</code></li>
+        <img src="images/sql-injection-diagram.png" alt="SQL Injection Diagram" style="max-width:100%; height:auto;"> <!--image for sql injection-->
+     </ul>
+
+     <!--Cross-Site Scripting Sections-->
+     <h2>2. Cross-Site Scripting (XSS)</h2>
+     <p>XSS attacks occur when an attacker inject malicious scripts intop content that is then served to other users. These scripts can steal session tokens, redirect users, or manipulate web pages.</p>
+     <ul>
+        <li>Types: Stored, Reflected, DOM-based</li>
+        <li>Targets users, not systems</li>
+        <li>Often results from improper input sanitization</li>
+     </ul>
+
+     <!--CSRF Section-->
+     <h2>Cross-Site Request Forgery (CSRF)</h2>
+     <p>CSRF tricks users into performing actions they diodn't intend on a website where they're authenticated. This can result in unwanted account changes, transactions, or data submissions.</p>
+     <ul>
+        <li>Exploits trust a site has in the user's browser</li>
+        <li>Usually delivered via image tags or hidden forms</li>
+        <li>Often mitigated using anti-CSRF tokens</li>
+     </ul>
+
+     <!--Broken Authentication Section-->
+     <h2>4.Broken Authentication</h2>
+     <p>This happens when untrusted data is used to abuse the logic of an application, inflict denial of service, or execute abitrary code during deserialization.</p>
+     <ul>
+        <li>Can lead to remote code execution</li>
+        <li>Triggered by manipulation of seralized objects</li>
+        <li>Commin in apps that use formats like JSON or XML</li>
+     </ul>
+
+     <!--Summary Table of Threats-->
+     <h2>Threat Summary Table</h2>
+     <div class="table-wrapper">
+     <table>
+        <tr>
+          <th>Threat</th>
+          <th>Impact</th>
+          <th>Mitigation</th>
+        </tr>
+        <tr>
+          <td>SQL Injection</td>
+          <td>Data theft, deletion, unauthorized access</td>
+          <td>Input validation, parameterized queries</td>
+        </tr>
+        <tr>
+          <td>XSS</td>
+          <td>Script execution, session hijacking</td>
+          <td>Output encoding, input sanitization</td>
+        </tr>
+        <tr>
+          <td>CSRF</td>
+          <td>Unauthorized actions</td>
+          <td>Anti-CSRF tokens, SameSite cookies</td>
+        </tr>
+        <tr>
+          <td>Broken Authentication</td>
+          <td>Account compromise</td>
+          <td>Strong passwords, 2FA, session control</td>
+        </tr>
+        <tr>
+          <td>Insecure Deserialization</td>
+          <td>Code execution, DoS</td>
+          <td>Type constraints, data integrity checks</td>
+        </tr>
+      </table>
+    </div>
     </section>
 
+    <!--footer-->
     <footer>
         <p>© 2025 Web Application Security</p>
     </footer>
